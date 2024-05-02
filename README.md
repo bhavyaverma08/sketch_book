@@ -1,5 +1,3 @@
-# React + Vite
-
 # Sketchbook
 It's a drawing tool created using react-painter library. 
 
@@ -7,8 +5,12 @@ It's a drawing tool created using react-painter library.
 
 For Running this project use the following commands - 
 
-npm install
-npm run dev
+1. npm install
+
+2. npm run dev
+
+
+# React + Vite 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
