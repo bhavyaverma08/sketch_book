@@ -2,18 +2,29 @@ import "./App.css";
 import ReactPainter from "react-painter";
 
 function App() {
+
   return (
     <>
       <ReactPainter
         width={1000}
         height={600}
-        render={({ canvas, triggerSave, setColor, setLineWidth, setLineCap, setLineJoin, imageDownloadUrl }) => (
+        render={({
+          canvas,
+          triggerSave,
+          setColor,
+          initialColor = "#fff",
+          setLineWidth,
+          setLineCap,
+          setLineJoin,
+          imageDownloadUrl,
+        }) => (
           <div>
             <h1>Sketchbook</h1>
             <div className="toolbox">
               <div className="flex">
                 <label>Brush</label>
                 <input
+                  defaultValue={"#ffffff"}
                   type="color"
                   onChange={(e) => {
                     setColor(e.target.value);
@@ -23,6 +34,7 @@ function App() {
               <div className="flex">
                 <label>Brush Size</label>
                 <input
+                  defaultValue={"1"}
                   type="range"
                   min={"1"}
                   max={"50"}
