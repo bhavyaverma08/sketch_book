@@ -2,7 +2,6 @@ import "./App.css";
 import ReactPainter from "react-painter";
 
 function App() {
-
   return (
     <>
       <ReactPainter
@@ -12,7 +11,6 @@ function App() {
           canvas,
           triggerSave,
           setColor,
-          initialColor = "#fff",
           setLineWidth,
           setLineCap,
           setLineJoin,
@@ -24,7 +22,6 @@ function App() {
               <div className="flex">
                 <label>Brush</label>
                 <input
-                  defaultValue={"#ffffff"}
                   type="color"
                   onChange={(e) => {
                     setColor(e.target.value);
@@ -74,7 +71,9 @@ function App() {
               {imageDownloadUrl ? (
                 <a href={imageDownloadUrl}>Download</a>
               ) : (
-                <button onClick={triggerSave}>Save sketch</button>
+                <button className="save-button" onClick={triggerSave}>
+                  Save sketch
+                </button>
               )}
             </div>
             <div className="awesomeContainer">{canvas}</div>
